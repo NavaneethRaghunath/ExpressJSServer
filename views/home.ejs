@@ -1,0 +1,14 @@
+<%-include('partials/header')-%>
+
+<h1>Home</h1>
+<br>
+<p><%=home%></p>
+<% blog.forEach((item)=>{ %>
+    <h1><%= item.title %></h1>
+  <%  const truncPost = item.body.substring(0,100); %>
+    <p><%= truncPost + "..." %><a href="/post/<%= item.title %>">Read More</a> </p>
+<% }) %>
+
+
+
+<%-include('partials/footer')-%>
